@@ -1,1 +1,0 @@
-#####Memorize logic operators
