@@ -61,7 +61,7 @@ timeit.timeit("[] + ([1] + ([2] + ([3] + [4])))")
 # 3) The libraries that support python are a turtle on which python stands
 # 
 # The OS and hardware form thier own stack of turtles
-
+# Nearing the end.
 
 
 
