@@ -1,24 +1,24 @@
 import numpy as np
 import matplotlib.pyplot as plt
-%matplotlib inline
+# %matplotlib inline
 
 a = 2.8e-4
 b = 5e-3
 tau = .1
-k = -0.005
+k = -.005
 
 # size of 2D grid
 size = 100 # size of 2D grid
-dx = 2.0/size # space step
+dx = 2./size # space step
 
 T = 10.0 #total time
-dt = 0.9 * dx**2/2 # time step
+dt = .9 * dx**2/2 # time step
 n = int(T / dt)
 
 U = np.random.rand(size, size)
 V = np.random.rand(size, size)
-U
-a = [1:-1,1:-1]
+
+# a = [1:-1,1:-1]
 # calculate laplacian
 def lapalacian(Z):
     Ztop = Z[0:-2, 1:-1]
@@ -34,8 +34,16 @@ for i in range(n):
     Uc = U[1:-1,1:-1]
     Vc = V[1:-1,1:-1]
 
-    U[1:-1,1:-1], V[1:-1,1:-1] = \ Uc + dt
+    U[1:-1,1:-1], V[1:-1,1:-1] = Uc + dt * (a * deltaU + Uc**3 - Vc + k), Vc + dt * (b * deltaV + Uc - Vc) / tau
 
+    for Z in (U, V):
+        Z[0,:] = Z[1,:]
+        Z[-1,:] = Z[-2,:]
+        Z[:,0] = Z[:,1]
+        Z[:,0] = Z[:,-2]
+
+plt.imshow(U, cmap = plt.cm.copper, extent = [-1,1,-1,1]);
+plt.xticks([]); plt.yticks([]);
 
 
 
