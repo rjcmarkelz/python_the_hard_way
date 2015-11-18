@@ -77,8 +77,27 @@ temps_df.Missoula > 82  #
 temps_df[temps_df.Missoula > 82] # only subsetted rows
 
 #####
-# NEXT loading CSVs
+# loading CSVs
 #####
 
+df = pd.read_csv('data/test1.csv')
+df.date
 
+df = pd.read_csv('data/test1.csv', parse_dates = ['date'])
+type(df.date[0])
 
+df.index # numeric
+
+# reimport 
+df = pd.read_csv('data/test1.csv', parse_dates = ['date'], index_col = 'date')
+
+# load data from the web
+from pandas.io.data import DataReader
+from datetime import date
+from dateutil.relativedelta import relativedelta
+
+goog = DataReader("GOOG", "yahoo", date.today() + relativedelta(months = -3))
+goog.head()
+goog.tail()
+
+goog.plot(y = 'Adj Close');
