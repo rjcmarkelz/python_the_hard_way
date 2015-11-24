@@ -52,9 +52,11 @@ class Stem(Organ):
 
 class Root(Organ):
     '''
-
     '''
-    def resp(self, mass):
+    def __init__(self, mass):
+        self.mass = mass
+    
+    def resp(self):
         return self.mass ** (0.75)
     
     def NFinder():
