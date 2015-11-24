@@ -1,6 +1,7 @@
 #plant.py
 class Plant(object):
     '''
+    doc tests are up next
     '''
     # X
     # Y
@@ -9,6 +10,7 @@ class Plant(object):
 
 class Organ(object):
     '''
+    doc tests are up next
     '''
     def __init__(self, name):
         self.name = name
@@ -35,16 +37,22 @@ class Leaf(Organ):
 
 class Stem(Organ):
     '''
+    doc tests are up next
     '''
+    def __init__(self, length, width, rate):
+        self.length = length
+        self.width = width
+        self.rate = rate
     
-    def photo():
-        pass
-
-    def resp():
-        pass
+    def photo(self):
+        return self.length*self.width*self.rate
+    
+    def resp(self):
+        return self.length*self.width*self.rate/2
 
 class Root(Organ):
     '''
+    doc tests are up next
     '''
     def sink():
         pass

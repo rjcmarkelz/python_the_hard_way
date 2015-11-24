@@ -1,0 +1,33 @@
+Check the arithmetic functions
+
+>>> 2 + 2
+4
+
+>>> 3*3
+10
+
+>>> import sys
+
+>>> def test_write():
+...     sys.stdout.write("Hello\n")
+...     return True
+
+>>> test_write()
+Hello
+True
+
+>>> def faulty():
+...     yield 5
+...     return 5
+Traceback (most recent call last): SyntaxError: 'return' with argument inside generator (<doctest test.txt[5]>, line 3)
+
+White Space Normalization
+>>> [1, 2, 3, 4, 5, 6, 7, 8, 9]
+... # doctest: +NORMALIZE_WHITESPACE
+[1, 2, 3, 
+ 4, 5, 6, 
+ 7, 8, 9]
+
+>>> sys.stdout.write("This text\n contains wierd           spacing.")
+... # doctest: +NORMALIZE_WHITESPACE
+This text contains wierd spacing.
