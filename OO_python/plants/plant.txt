@@ -21,11 +21,10 @@
 >>> r1.resp()
 2.8284271247461903
 
->>> carbon_gain(p1, s1)
-15
-
->>> carbon_balance(p1, s1, r1)
-4.67157287525381
-
 >>> photo(3, 3)
 9
+>>> photo()
+1
+
+>>> carbon_gain()
+
