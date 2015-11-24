@@ -20,3 +20,5 @@ class Note:
     def match(self, filter):
         '''determine if this note matches'''
         return filter in self.memo or filter in self.tags
+
+

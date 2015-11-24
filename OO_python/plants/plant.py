@@ -20,14 +20,15 @@ class Organ(object):
     # C
     # N
 
-class Leaf(Organ, area, rate):
+class Leaf(Organ):
     '''
     '''
-    self.area = area
-    self.rate = rate
-    def photo():
-        return area*rate
-    def resp():
+    def __init__(self, area, rate):
+        self.area = area
+        self.rate = rate
+    def photo(self):
+        return print(area*rate)
+    def resp(self):
         return area*rate/2
 
 class Stem(Organ):
@@ -48,5 +49,10 @@ class Root(Organ):
     def PFinder():
         pass
 
-
+class Point:
+    def move(self, x, y):
+        self.x = x
+        self.y = y
+    def reset(self):
+        self.move(0, 0)
 
