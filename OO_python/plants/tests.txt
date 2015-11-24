@@ -1,0 +1,13 @@
+>>> import plant
+>>> o1 = Organ()
+>>> o1.name
+o1
+
+>>> p1 = Leaf(2, 3, 4)
+>>> p1.photo()
+24
+>>> p1.resp()
+12
+
+>>> st1 = Stem(2, 3, 0.5)
+

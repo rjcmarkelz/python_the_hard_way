@@ -1,12 +1,12 @@
 #plant.py
-class Plant(object):
-    '''
-    doc tests are up next
-    '''
-    # X
-    # Y
-    # age
-    # development
+# class Plant(object):
+#     '''
+#     doc tests are up next
+#     '''
+#     # X
+#     # Y
+#     # age
+#     # development
 
 class Organ(object):
     '''
@@ -30,10 +30,10 @@ class Leaf(Organ):
         self.rate = rate
     
     def photo(self):
-        return self.area*self.area
+        return self.area*self.rate
     
     def resp(self):
-        return self.area*self.area/2
+        return (self.area*self.rate)/2
 
 class Stem(Organ):
     '''
@@ -48,14 +48,14 @@ class Stem(Organ):
         return self.length*self.width*self.rate
     
     def resp(self):
-        return self.length*self.width*self.rate/2
+        return (self.length*self.width*self.rate)/2
 
 class Root(Organ):
     '''
-    doc tests are up next
+
     '''
-    def sink():
-        pass
+    def resp(self, mass):
+        return self.mass ** (0.75)
     
     def NFinder():
         pass
