@@ -64,3 +64,59 @@ class Root(Organ):
     
     def PFinder():
         pass
+
+def photo(area = 1, rate = 1):
+    return area*rate
+
+def carbon_gain():
+    return 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

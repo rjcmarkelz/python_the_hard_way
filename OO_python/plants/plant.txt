@@ -2,6 +2,7 @@
 >>> from plant import Leaf
 >>> from plant import Stem
 >>> from plant import Root
+>>> from plant import photo
 >>> o1 = Organ("Organ")
 
 >>> p1 = Leaf(3.0, 4.0)
@@ -19,3 +20,12 @@
 >>> r1 = Root(4)
 >>> r1.resp()
 2.8284271247461903
+
+>>> carbon_gain(p1, s1)
+15
+
+>>> carbon_balance(p1, s1, r1)
+4.67157287525381
+
+>>> photo(3, 3)
+9
