@@ -6,6 +6,7 @@
 >>> from plant import carbon_gain
 >>> from plant import Plant
 >>> from plant import Data
+>>> from plant import CarbView
 >>> o1 = Organ("Organ")
 
 >>> p1 = Leaf(3.0, 4.0)
@@ -31,5 +32,10 @@
 
 >>> carbon_gain()
 >>> p1 = Plant()
-
 >>> d1 = Data('Plant1')
+
+>>> c1 = CarbView()
+>>> d1.attach(c1)
+
+>>> d1.data = 10
+Plant1 has a carbon

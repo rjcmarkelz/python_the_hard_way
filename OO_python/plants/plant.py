@@ -108,16 +108,21 @@ class Plant(object):
 
 class Data(Plant):
 
-    def __init__(self, name='')
-    # Plant.__init__(self)
-    self.name = name
-    self._data = 0
+    def __init__(self, name=''):
+        Plant.__init__(self)
+        self.name = name
+        self._data = 0
 
-    # @property
-    # def data(self):
-    #     return self._data
+    @property
+    def data(self):
+        return self._data
 
-    # @data.setter
-    # def data(self, value):
-    #     self._data = value
-    #     self.notify()
+    @data.setter
+    def data(self, value):
+        self._data = value
+        self.notify()
+
+class CarbView:
+
+    def update(self, plant):
+        print('%s has %x carbon' % (plant.name, plant.data))
