@@ -109,7 +109,7 @@ class Plant(object):
 class Data(Plant):
 
     def __init__(self, name='')
-    Plant.__init__(self)
+    # Plant.__init__(self)
     self.name = name
     self._data = 0
 
