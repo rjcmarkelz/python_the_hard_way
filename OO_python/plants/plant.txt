@@ -5,7 +5,7 @@
 >>> from plant import photo
 >>> from plant import carbon_gain
 >>> from plant import Plant
->>> from plant import Data
+>>> from plant import Carbon
 >>> from plant import CarbView
 >>> o1 = Organ("Organ")
 
@@ -32,10 +32,20 @@
 
 >>> carbon_gain()
 >>> p1 = Plant()
->>> d1 = Data('Plant1')
+>>> d1 = Carbon('Plant1')
 
 >>> c1 = CarbView()
 >>> d1.attach(c1)
 
->>> d1.data = 10
-Plant1 has a carbon
+>>> d1.carbon = 10
+Plant1 has 10 carbon
+Plant1 has 10 length
+
+>>> d1.length = 25
+Plant1 has 10 carbon
+Plant1 has 25 length
+
+# >>> d1.photo = 5
+# Plant1 has 10 carbon
+# Plant1 has 25 length
+# Plant1 has 15 photo

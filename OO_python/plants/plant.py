@@ -74,13 +74,6 @@ class Root(Organ):
         pass
 
 
-class CarbView:
-
-    def update(self, organ):
-        print('Organ %s has %x carbon' % (organ.name, organ.data))
-# ##### Functions #####
-
-
 def photo(area=1, rate=1):
     return area * rate
 
@@ -106,23 +99,38 @@ class Plant(object):
                 observer.update(self)
 
 
-class Data(Plant):
+class Carbon(Plant):
 
     def __init__(self, name=''):
         Plant.__init__(self)
         self.name = name
-        self._data = 0
+        self._carbon = 10
+        self._length = 10
+        # self.photo = 3
 
     @property
-    def data(self):
-        return self._data
+    def carbon(self):
+        return self._carbon
 
-    @data.setter
-    def data(self, value):
-        self._data = value
+    @carbon.setter
+    def carbon(self, value):
+        self._carbon = value
         self.notify()
+
+    @property
+    def length(self):
+        return self._length
+
+    @length.setter
+    def length(self, value):
+        self._length = value
+        self.notify()
+
+
 
 class CarbView:
 
     def update(self, plant):
-        print('%s has %x carbon' % (plant.name, plant.data))
+        print('%s has %d carbon' % (plant.name, plant.carbon))
+        print('%s has %d length' % (plant.name, plant.length))
+        # print('%s has %d photo' % (plant.name, plant.photo))
