@@ -126,8 +126,6 @@ class Carbon(Plant):
         self._length = value
         self.notify()
 
-
-
 class CarbView:
 
     def update(self, plant):
