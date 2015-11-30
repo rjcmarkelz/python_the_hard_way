@@ -17,3 +17,10 @@ void main()
 {
     gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
 }
+"""
+
+program = gloo.Program(vertex, fragment)
+
+program['a_position'] = np.c_[np.linspace(-1.0, +1.0, 100), np.random.uniform(-0.5,+0.5,100)]
+
+c.show()

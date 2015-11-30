@@ -1,8 +1,9 @@
 # modified heavily from http://www.bogotobogo.com/python/python_graph_data_structures.php
 class Vertex:
-    def __init__(self, node):
+    def __init__(self, node, X=1, Y=1, Z=1):
         self.id = node
         self.adjacent = {}
+        self.coord = [X, Y, Z]
 
     def __str__(self):
         return str(self.id) + 'adjacent: ' + str([x.id for x in self.adjacent])
@@ -22,6 +23,9 @@ class Vertex:
 
     def get_length(self, neighbor):
         return self.adjacent[neighbor][1]
+
+    def get_coord(self):
+        return self.coord
 
 class Graph:
     def __init__(self):
