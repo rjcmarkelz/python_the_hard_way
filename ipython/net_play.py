@@ -34,3 +34,17 @@ axe = plt.axes(projection='3d')
 axe.scatter3D(xdata, ydata, zdata, c=zdata, cmap='Greens');
 
 plt.show()
+
+g = Graph()
+g.add_vertex(n0)
+g.add_vertex(s1)
+g.add_vertex(p1)
+g.add_vertex(l1)
+
+g.add_edge(n0, s1)
+g.add_edge(s1, p1)
+g.add_edge(p1, l1)
+g.get_vertices()
+
+
+
