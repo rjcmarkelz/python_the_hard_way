@@ -59,4 +59,13 @@ class Graph:
     def get_vertices(self):
         return self.vert_dict.keys()
 
+def getcoord(oblist):
+    xdata = []
+    ydata = []
+    zdata = []
+    for ob in oblist:
+        xdata.append(ob.get_coord()[0])
+        ydata.append(ob.get_coord()[1])
+        zdata.append(ob.get_coord()[2])
+    return [xdata, ydata, zdata]
 
