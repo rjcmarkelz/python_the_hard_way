@@ -32,21 +32,50 @@ class Leaf(object):
         self.area = area
         self.photo_dt = photo_dt
         self.resp_dt = resp_dt
-        self.shape = shape  
+        self.shape = shape
+
     def photosynthesis(self):
         return (self.area * self.photo_dt)
+
     def respiration(self):
         return (self.area * self.resp_dt) / 2
 
 plant = nx.Graph()
 leafin = Leaf('leafin')
-leafin.photosynthesis
+stemin = Leaf('stemin')
+petiolein = Leaf('petiolein')
+rootin = Leaf('rootin')
+leafin.photosynthesis()
+# returns 10
 
-plant.add_node('leaf', data = leafin)
+plant.add_node('leafclass', data = leafin, color = 'green')
 
 leafout = plant.node['leaf']['data']
 
-leafout.photosynthesis
+leafout.photosynthesis()
+# returns 10
 
-out.area
-plant(1)
+leafout.respiration()
+# returns 1.0
+
+leafin == leafout
+# returns TRUE
+
+plant.add_node('stemclass', data = stemin)
+
+plant.add_node('petioleclass', data = petiolein)
+
+plant.add_node('rootclass', data = rootin)
+
+plant.add_edge('stemclass', 'rootclass', weight = 5, color = 'red')
+
+nx.draw(plant)
+plt.show()
+
+
+
+
+
+
+
+
